@@ -1,0 +1,81 @@
+name: Bug Report
+description: Report a defect in EPIC // S.A.G.E
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **EPIC // S.A.G.E — Bug Report**
+        Built By M.E.D | Please provide enough detail to reproduce the issue.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      options:
+        - Backend (FastAPI)
+        - Frontend (React)
+        - S.A.G.E Rules Engine
+        - Pricing Engine
+        - Audit Ledger
+        - Docker / Infra
+        - CI/CD Pipeline
+        - Governance / Compliance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P0 Critical (system down / data loss / audit breach)
+        - P1 High (major feature broken)
+        - P2 Medium (degraded behaviour)
+        - P3 Low (cosmetic / minor)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clear description of what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Start docker compose
+        2. POST /api/v1/bookings with ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment
+      placeholder: |
+        - Version/tag:
+        - OS:
+        - Docker version:
+        - Python / Node version:
+        - Browser (if frontend):

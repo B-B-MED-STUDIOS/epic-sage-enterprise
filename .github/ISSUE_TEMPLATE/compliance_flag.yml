@@ -1,0 +1,58 @@
+name: Compliance / Governance Flag
+description: Flag a compliance, audit, or S.A.G.E governance issue
+labels: ["compliance", "sovereign", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **EPIC // S.A.G.E — Compliance Flag**
+        Use this for audit chain issues, S.A.G.E rule violations, territorial compliance gaps, or override protocol concerns.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Flag Type
+      options:
+        - Audit chain integrity failure
+        - S.A.G.E rule incorrect or missing
+        - Territorial obligation gap
+        - Override protocol violation
+        - Privacy / APP breach
+        - SOCI Act exposure
+        - Waterfall integrity violation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P0 Critical (breach in progress)
+        - P1 High (potential breach)
+        - P2 Medium (gap identified)
+        - P3 Low (improvement opportunity)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+    validations:
+      required: true
+
+  - type: textarea
+    id: annex
+    attributes:
+      label: Relevant Annex / Spec Section
+      description: e.g. Annex A — A.4.4, Annex B — B.6.3, CLI Spec — SG-2
+
+  - type: checkboxes
+    id: escalate
+    attributes:
+      label: Escalation Required?
+      options:
+        - label: Requires immediate Governance Council notification
+        - label: Requires Legal Harmonisation Unit review
+        - label: Requires Ethics Secretariat review

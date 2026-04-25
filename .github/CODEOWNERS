@@ -1,0 +1,12 @@
+# EPIC // S.A.G.E — Code Ownership
+# Built By M.E.D Studios
+
+# Default: founder reviews everything
+* @B-B-MED-STUDIOS
+
+# Governance and compliance — always requires founder sign-off
+backend/app/services/governance/ @B-B-MED-STUDIOS
+backend/app/services/audit/      @B-B-MED-STUDIOS
+backend/app/core/                @B-B-MED-STUDIOS
+.github/workflows/               @B-B-MED-STUDIOS
+docs/                            @B-B-MED-STUDIOS

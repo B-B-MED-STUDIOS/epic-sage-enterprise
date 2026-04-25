@@ -1,0 +1,52 @@
+name: Feature Request
+description: Propose a new capability for EPIC // S.A.G.E
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **EPIC // S.A.G.E — Feature Request**
+        Built By M.E.D | Describe the capability and its sovereign value.
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Target Layer
+      options:
+        - Layer 0 — Domain
+        - Layer 1 — Sovereign Core
+        - Layer 2 — Deterministic Engines
+        - Layer 3 — Execution (API)
+        - Layer 4 — S.A.G.E Governance
+        - Layer 5 — Audit
+        - Layer 6 — Founder Override
+        - Infra / DevOps
+        - Frontend Console
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What gap or limitation does this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+    validations:
+      required: true
+
+  - type: textarea
+    id: governance
+    attributes:
+      label: Governance / Compliance Impact
+      description: Does this change affect Annex A/B logic, the audit ledger, or territorial compliance?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
