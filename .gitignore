@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+*.db
+.venv/
+venv/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.env
+
+# Docker
+*.log
+
+# Secrets — NEVER commit
+backend/.env
+*.pem
+*.key
+secrets/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
